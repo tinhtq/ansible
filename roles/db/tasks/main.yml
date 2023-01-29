@@ -1,0 +1,4 @@
+- name: install mysql
+  apt:
+    name: mysql-server
+    state: latest

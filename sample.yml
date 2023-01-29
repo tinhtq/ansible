@@ -1,0 +1,16 @@
+- hosts: all
+  become: true
+  roles:
+    - base
+- hosts: web
+  #vars_files:
+   # - roles/web/host_vars/192.168.190.129.yml
+  become: true
+  roles:
+    - web
+- hosts: db
+  vars_files:
+    - host_vars/mysql_var/main.yml
+  become: true
+  roles:
+    - db

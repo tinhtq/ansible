@@ -1,0 +1,5 @@
+- name: install apache2 and
+  apt:
+    name:
+      - "{{ apache_package_name }}"
+      - "{{ php_package_name }}"
